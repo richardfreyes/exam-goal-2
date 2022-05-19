@@ -1,0 +1,26 @@
+<div class="footer">
+  <div class="container">
+    <div class="footer__content-holder">
+      <div class="footer__newsletter">
+        <app-newsletter></app-newsletter>
+      </div>
+      <div class="footer__line-separator footer__line-separator--thick"></div>
+      <div class="footer__logo-holder">
+        <img class="footer__img-logo" src="../../../../../assets/images/logo.png" alt="Logo">
+      </div>
+      <div class="footer__links-holder">
+        <ul class="footer__page-links">
+          <li class="footer__page-link" *ngFor="let pageLink of pagesLinks"><a class="footer__page-link-anchor" href="#">{{ pageLink.label }}</a></li>
+        </ul>
+        <ul class="footer__contact-info">
+          <li class="footer__contact-num"><a class="footer__contact-link" href="tel:0800700699">0800 700 699</a></li>
+          <li class="footer__contact-num"><a class="footer__contact-link" href="mailto:reception@havenadvisers.co.nz">reception@havenadvisers.co.nz</a></li>
+        </ul>
+        <div class="footer__line-separator"></div>
+        <div class="footer__copyright-holder">
+          <p class="footer__copyright-text">Copyright © 2017 Haven Advisers Limited. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

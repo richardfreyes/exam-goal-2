@@ -1,0 +1,57 @@
+@use '../../../../../assets/theme/mixins' as mixin
+
+.newsletter
+  &__holder
+    @include mixin.flexbox
+    justify-content: center
+
+  &__label
+    margin: auto 15px
+    color: var(--text-white)
+    text-transform: uppercase
+    letter-spacing: 1.5px
+
+  &__fields
+    margin-right: 8px
+    padding: 8px
+    color: var(--text-grey-3)
+    border: 2px solid var(--color-grey-3)
+    background-color: transparent
+
+    &::placeholder
+      color: var(--text-grey-3)
+
+    @include mixin.on-event
+      outline: none
+
+  &__btn
+    padding: 8px 12px
+    color: var(--text-white)
+    letter-spacing: 1px
+    background-color: var(--bg-color-brand)
+    border: none
+    cursor: pointer
+
+    @include mixin.on-event
+      outline: none
+
+  @include mixin.respond-to(md-down)
+    &__holder
+      flex-wrap: wrap
+
+    &__label
+      width: 100%
+      text-align: center
+      margin-bottom: 1rem
+
+  @include mixin.respond-to(xs)
+    &__form
+      text-align: center
+      
+    &__fields
+      width: 100%
+      margin-right: 0
+      margin-bottom: 0.5rem
+
+    &__btn
+      margin-top: 0.5rem

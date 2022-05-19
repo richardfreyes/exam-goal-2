@@ -1,0 +1,56 @@
+html
+  font-size: 100%
+
+  @include respond-to(xl)
+    font-size: 90%
+
+  @include respond-to(lg-down)
+    font-size: 85%
+
+body
+  margin: 0
+  color: var(--text-color)
+  font: 300 0.95rem 'Source Sans Pro', sans-serif
+
+*
+  box-sizing: border-box
+
+a
+  outline: none
+  text-decoration: none
+
+input,
+select,
+textarea
+  padding: 8px
+  color: var(--text-grey-3)
+  border: 1px solid var(--color-grey-5)
+  background-color: transparent
+
+  &:not(:last-child)
+    margin-right: 8px
+    
+  
+.container
+  position: relative
+  z-index: 2
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+
+  @include respond-to(xs)
+    max-width: 100%
+  @include respond-to(sm)
+    max-width: 540px
+  @include respond-to(md)
+    max-width: 720px
+  @include respond-to(lg)
+    max-width: 960px
+  @include respond-to(xl)
+    max-width: 1310px
+  @include respond-to(xxl)
+    max-width: 1310px
+
+  &--fluid
+    max-width: 100%

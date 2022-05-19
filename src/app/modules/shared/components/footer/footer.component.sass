@@ -1,0 +1,93 @@
+@use '../../../../../assets/theme/mixins' as mixin
+  
+.footer
+  *
+    color: var(--text-grey-3)
+
+  &__content-holder
+    padding: 20px 0 0 0
+    background-color: var(--bg-color-dark)
+
+  &__logo-holder
+    padding-top: 25px
+    text-align: center
+
+  &__img-logo
+    width: 90px
+  
+  &__page-links
+    @include mixin.flexbox
+    margin: 14px 0 0 0
+    padding: 0
+    list-style: none
+    justify-content: center
+
+  &__page-link
+    margin: 0 1.1rem
+
+  &__page-link-anchor
+    text-transform: uppercase
+    font-size: 0.7rem
+    font-weight: normal
+
+    @include mixin.on-event
+      color: var(--text-brand)
+
+  &__contact-link
+    @include mixin.on-event
+      color: var(--text-brand)
+
+  &__contact-info
+    margin: 25px 0 0 0
+    padding: 0
+    text-align: center
+    list-style: none
+
+  &__copyright-text
+    margin: 0
+    padding: 10px 25px
+    text-align: right
+    font-size: 0.9rem
+    letter-spacing: 0.4px
+
+  &__line-separator
+    margin: 25px 25px 0
+    border: 1px solid var(--color-grey-4)
+
+    &--thick
+      border-color: var(--color-grey)
+
+  @include mixin.respond-to(md-down)
+    &__content-holder
+      padding: 1.5rem
+
+    &__copyright-text
+      text-align: center
+
+    &__page-link-anchor
+      font-size: 0.8rem
+
+    &__contact-link
+      font-size: 1.1rem
+
+  @include mixin.respond-to(sm-down)
+    &__content-holder
+      padding: 1.5rem 1.5rem 0.5rem
+
+    &__line-separator
+      margin: 25px 0 5px
+
+      &--thick
+        margin: 25px 0
+
+    &__logo-holder
+      padding-top: 0
+
+    &__page-links
+      display: block
+      text-align: center
+
+    &__page-link
+      &:not(:last-child)
+        margin-bottom: 0.5rem
+        

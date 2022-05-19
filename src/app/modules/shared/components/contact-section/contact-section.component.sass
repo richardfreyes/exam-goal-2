@@ -1,0 +1,133 @@
+@use '../../../../../assets/theme/mixins' as mixin
+
+%fieldTheme
+  flex: 1
+  color: var(--text-grey-5)
+  border-color: var(--color-grey-5)
+  outline: none
+
+  &::placeholder
+    color: var(--text-grey-5)
+
+.contact-us
+  &__row
+    @include mixin.flexbox
+
+  &__col
+    padding: 45px 35px
+
+    &.form
+      width: 65%
+
+    &.info
+      width: 35%
+
+  &__title
+    margin: 0
+    font-weight: 300
+    font-size: 1.5rem
+    letter-spacing: 2px
+
+  &__desc
+    margin: 5px
+
+  &__text-holder
+    width: 50%
+    margin: auto
+    text-align: center
+
+  &__form
+    margin: 40px auto 0
+    width: 80%
+
+  &__field-group
+    @include mixin.flexbox
+    margin-bottom: 9px
+
+  &__input
+    @extend %fieldTheme
+    width: 100%
+
+  &__select
+    @extend %fieldTheme
+    width: 100%
+
+    option
+      color: var(--text-color)
+
+  &__textarea
+    @extend %fieldTheme
+    width: 100%
+
+  &__btn-holder
+    text-align: right
+
+  &__btn
+    margin-top: 0.4rem
+    color: var(--text-brand)
+    font-weight: 600
+    background-color: var(--bg-color-white)
+    cursor: pointer
+
+  &__section-title
+    font-size: 1.3rem
+    font-weight: 400
+
+  &__lists
+    margin-top: 2rem
+    padding: 0
+    list-style: none
+
+  &__list-link
+    display: inline-block
+    padding: 0.5rem 0
+    color: var(--text-color)
+    font-weight: 600
+
+    @include mixin.on-event
+      color: var(--text-brand)
+
+  &__icon
+    position: relative
+    top: 2px
+    width: 0.7rem
+    margin-right: 1.5rem
+    fill: var(--color-grey)
+
+  @include mixin.respond-to(md-down)
+    &__row
+      display: block
+
+    &__desc
+      font-size: 1.1rem
+
+    &__col
+      &.form
+        width: 100%
+        padding: 1.5rem
+        border-top: 1px solid var(--color-white)
+
+      &.info
+        width: 100%
+        padding: 1.5rem
+
+    &__text-holder
+      width: 100%
+
+    &__form
+      width: 100%
+      margin-top: 1.5rem
+
+    &__btn-holder
+      margin-top: 1rem
+      text-align: center
+
+      input
+        padding: 8px 32px
+
+    &__lists
+      margin-top: 1.5rem
+
+  @include mixin.respond-to(sm-down)
+    &__field-group
+      flex-wrap: wrap

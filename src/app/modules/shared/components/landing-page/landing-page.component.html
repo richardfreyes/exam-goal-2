@@ -1,0 +1,25 @@
+<div class="lading-page">
+  <div class="container">
+    <div class="landing-page__row">
+      <div class="landing-page__col info bg-brand">
+        <img class="landing-page__img-logo" src="../../../assets/images/logo.png" alt="Logo">
+        <h1 class="landing-page__title title big">Lorem ipsum dolor sit amet</h1>
+        <p class="landing-page__desc desc big">consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolo re magna aliqua onsectetur adipiscing elit, sed do eius mod tempor incid.</p>
+      </div>
+      <div class="landing-page__col blog bg-grey">
+        <div class="landing-page__content-holder">
+          <h3 class="landing-page__section-title section-title">News &amp; blog</h3>
+          <ul class="landing-page__blog-lists">
+            <li class="landing-page__blog-list"
+              *ngFor="let blogItem of blogLists">
+              <a class="landing-page__blog-list-link" href="#">
+                <span class="landing-page__blog-list-label">{{ blogItem?.label }}</span>
+                <span class="arrow-right"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

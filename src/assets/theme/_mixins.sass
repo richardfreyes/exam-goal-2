@@ -1,0 +1,79 @@
+@mixin on-event($self: false) 
+  @if $self
+   &,
+   &:active,
+   &:focus,
+   &:hover 
+    @content
+   
+  @else
+   &:active,
+   &:focus,
+   &:hover 
+    @content
+
+@mixin respond-to($breakpoint) 
+  @if $breakpoint == "xs"
+    @media screen and (max-width: 575px)
+      @content
+
+  @else if $breakpoint == "sm-down" 
+    @media screen and (max-width: 767px)  
+      @content
+      
+  @else if $breakpoint == "sm" 
+    @media (min-width: 576px) and (max-width: 767px)
+       @content
+
+  @else if $breakpoint == "sm-up"
+    @media screen and (min-width: 576px) 
+      @content
+
+  @else if $breakpoint == "md-down"
+    @media screen and (max-width: 991px)
+      @content
+
+  @else if $breakpoint == "md"
+    @media (min-width: 768px) and (max-width: 991px)
+      @content
+
+  @else if $breakpoint == "md-up"
+    @media screen and (min-width: 768px) 
+      @content
+
+  @else if $breakpoint == "lg-down"
+    @media screen and (max-width: 1199px)
+      @content
+
+  @else if $breakpoint == "lg"
+    @media (min-width: 992px) and (max-width: 1199px)
+      @content
+
+  @else if $breakpoint == "lg-up"
+    @media screen and (min-width: 992px)
+      @content
+
+  @else if $breakpoint == "xl-down"
+    @media screen and (max-width: 1399px)
+      @content
+
+  @else if $breakpoint == "xl"
+    @media (min-width: 1200px) and (max-width: 1399px)
+      @content
+
+  @else if $breakpoint == "xl-up"
+    @media screen and (min-width: 1200px)
+      @content
+
+  @else if $breakpoint == "xxl"
+    @media screen and (min-width: 1400px)
+      @content
+  
+@mixin flexbox() 
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+

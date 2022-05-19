@@ -1,0 +1,10 @@
+<div class="newsletter">
+  <div class="newsletter__holder">
+    <p class="newsletter__label">Sign up to our newsletter</p>
+    <form class="newsletter__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input class="newsletter__fields" [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }" formControlName="fullname" type="text" placeholder="Full name">
+      <input class="newsletter__fields" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" formControlName="email" type="email" placeholder="Emaill address">
+      <input class="newsletter__btn" type="submit" value="Submit">
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+@use '../../../../../assets/theme/mixins' as mixin
+
+.nav-main
+  background-color: var(--bg-color-white)
+
+  &__lists
+    @include mixin.flexbox
+    margin: 0
+    padding: 1.5rem 0
+    list-style: none
+    justify-content: space-around
+    overflow: auto
+
+  &__list
+    font-size: 0.9rem
+    letter-spacing: 1.1px
+
+    a
+      color: var(--text-color)
+      font-weight: 600
+      white-space: nowrap
+
+      @include mixin.on-event
+        color: var(--text-brand)
+
+  @include mixin.respond-to(md-down)
+    &__lists
+      justify-content: start
+      
+    &__list
+      padding: 0 1rem
+      
